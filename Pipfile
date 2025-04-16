@@ -4,13 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pandas = "*"
-boto3 = "*"
-ipykernel = "*"
-matplotlib = "*"
-sqlalchemy = "==1.3.9"
-ipython-sql = "*"
-psycopg2-binary = "*"
+mrjob = "*"
 
 [dev-packages]
 
