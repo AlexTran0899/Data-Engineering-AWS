@@ -5,6 +5,11 @@ name = "pypi"
 
 [packages]
 mrjob = "*"
+pyspark = "*"
+numpy = "*"
+pandas = "*"
+matplotlib = "*"
+setuptools = "*"
 
 [dev-packages]
 
