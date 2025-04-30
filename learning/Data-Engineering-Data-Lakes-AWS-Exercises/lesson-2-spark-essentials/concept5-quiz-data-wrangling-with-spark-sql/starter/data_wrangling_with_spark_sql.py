@@ -7,6 +7,7 @@
 
 
 from pyspark.sql import SparkSession
+import datetime
 
 # TODOS: 
 # 1) import any other libraries you might need
@@ -15,6 +16,13 @@ from pyspark.sql import SparkSession
 # 4) create a view to use with your SQL queries
 # 5) write code to answer the quiz questions 
 
+spark = SparkSession \
+    .builder \
+    .appName("Data wrangling with Spark SQL") \
+    .getOrCreate()
+
+path = "/Users/at/Documents/udacity/learning/Data-Engineering-Data-Lakes-AWS-Exercises/lesson-2-spark-essentials/data/sparkify_log_small.json"
+user_log_df = spark.read.json(path)
 
 # # Question 1
 # 

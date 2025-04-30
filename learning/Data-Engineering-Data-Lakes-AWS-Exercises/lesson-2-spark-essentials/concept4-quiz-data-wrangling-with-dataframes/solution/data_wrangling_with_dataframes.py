@@ -102,8 +102,7 @@ ishome = udf(lambda ishome : int(ishome == 'Home'), IntegerType())
 cusum = logs_df.filter((logs_df.page == 'NextSong') | (logs_df.page == 'Home')) \
     .select('userID', 'page', 'ts') \
     .withColumn('homevisit', ishome(col('page'))) \
-    .withColumn('period', Fsum('homevisit') \
-    .over(user_window)) 
+    .withColumn('period', Fsum('homevisit').over(user_window)) 
     
 # This will only show 'Home' in the first several rows due to default sorting
 
